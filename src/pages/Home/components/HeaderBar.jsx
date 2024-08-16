@@ -16,7 +16,7 @@ const logoStyle = {
   height: '25px',
   with: 'auto',
   cursor: 'pointer',
-  padding: '0 10px',
+  padding: '0 5px',
 };
 
 function HeaderBar({ mode, toggleColorMode }) {

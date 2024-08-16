@@ -97,6 +97,11 @@ export default function First() {
             width: { xs: '100%', sm: '70%' },
           }}
         >
+          {/* <img
+            src="/logo.svg"
+            alt="logo"
+            style={{ height: '100px', margin: '50px' }}
+          /> */}
           <Typography
             variant="h1"
             sx={{
@@ -107,6 +112,7 @@ export default function First() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
+            {/* Cortex-Logo */}
             <Typography
               component="span"
               variant="h1"
@@ -119,9 +125,7 @@ export default function First() {
                     : 'primary.light',
                 height: { xs: '8rem', sm: '10rem' },
               }}
-            >
-              {/* Cortex-Logo */}
-            </Typography>
+            ></Typography>
           </Typography>
           <Typography
             component="h2"
@@ -182,6 +186,7 @@ export default function First() {
               <Button
                 component="a"
                 target="_blank"
+                onClick={() => navigate('/dashboard')}
                 sx={{
                   borderWidth: 0,
                   color: '#ffffff',
@@ -274,6 +279,7 @@ export default function First() {
                 <Button
                   component="a"
                   target="_blank"
+                  onClick={() => navigate('/dashboard')}
                   sx={{
                     borderWidth: 0,
                     color: '#ffffff',
