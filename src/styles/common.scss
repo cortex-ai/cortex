@@ -29,3 +29,46 @@
   -ms-user-select: none; /* IE/Edge */
   user-select: none; /* 标准语法 */
 }
+
+// 元素 - 穿透
+.pointer-pass {
+  pointer-events: none;
+}
+
+// line线 挡住渐变
+.line-mask {
+  position: absolute;
+  top: -48px;
+  height: 48px;
+  width: 100%;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0, #ffffff 100%);
+  pointer-events: none;
+}
+
+/* 文字单行省略号 */
+.single-omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 文字多行省略号 */
+.multiple-omit {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* 文字多了自動換行 */
+.break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+// 点击缩放
+.click-scale:active {
+  transform: scale(0.95);
+  opacity: 0.95;
+  transition: 100ms;
+}

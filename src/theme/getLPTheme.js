@@ -265,10 +265,10 @@ export default function getLPTheme(mode) {
         },
       },
       MuiButtonBase: {
-        defaultProps: {
-          disableTouchRipple: true,
-          disableRipple: true,
-        },
+        // defaultProps: {
+        //   disableTouchRipple: true,
+        //   disableRipple: true,
+        // },
         styleOverrides: {
           root: {
             boxSizing: 'border-box',
@@ -320,10 +320,10 @@ export default function getLPTheme(mode) {
             }),
             ...(ownerState.variant === 'text' && {
               color: brand[500],
-              '&:hover': {
-                backgroundColor: alpha(brand[300], 0.3),
-                borderColor: brand[200],
-              },
+              // '&:hover': {
+              //   backgroundColor: alpha(brand[300], 0.3),
+              //   borderColor: brand[200],
+              // },
             }),
             ...(theme.palette.mode === 'dark' && {
               ...(ownerState.variant === 'outlined' && {

@@ -60,7 +60,12 @@ export default function Footer() {
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <Box sx={{ ml: '-15px' }}>
+            <Box
+              sx={{
+                ml: '-15px',
+                // filter: 'drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25))',
+              }}
+            >
               <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
@@ -87,20 +92,19 @@ export default function Footer() {
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            产品
+            主页
           </Typography>
-          <Link color="text.secondary" href="#">
-            介绍
-          </Link>
-
           <Link color="text.secondary" href="#">
             功能
           </Link>
           <Link color="text.secondary" href="#">
-            大家的评价
+            方案
           </Link>
           <Link color="text.secondary" href="#">
-            开通会员
+            评价
+          </Link>
+          <Link color="text.secondary" href="#">
+            成为Pro会员
           </Link>
           <Link color="text.secondary" href="#">
             你想了解的

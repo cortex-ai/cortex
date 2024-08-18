@@ -74,7 +74,9 @@ export default function Five() {
   const [alignment, setAlignment] = React.useState('web');
 
   const handleChange = (event, newAlignment) => {
-    setAlignment(newAlignment);
+    if (newAlignment !== null) {
+      setAlignment(newAlignment);
+    }
   };
   return (
     <Container
@@ -106,7 +108,7 @@ export default function Five() {
             textAlign: { xs: 'center', sm: 'center', md: 'center' },
           }}
         >
-          <span className="cortex-font">开通</span>
+          <span className="cortex-font">成为Pro会员</span>
         </Typography>
         <Typography
           component="h2"
