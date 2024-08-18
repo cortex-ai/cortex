@@ -42,7 +42,7 @@ export default function First() {
       id="first-page"
       sx={(theme) => ({
         width: '100%',
-        height: { sm: '70vh', md: '60vh' },
+        // height: { sm: '70vh', md: '60vh' },
         backgroundImage:
           theme.palette.mode === 'light'
             ? 'linear-gradient(180deg, #CEE5FD, #FFFFFF)'
@@ -52,7 +52,7 @@ export default function First() {
       })}
     >
       {/* 背景 */}
-      <div className="first-page-bg"></div>
+      <div className="first-page-bg pointer-pass"></div>
       <Container
         sx={{
           display: 'flex',
@@ -139,6 +139,13 @@ export default function First() {
           >
             <span className="cortex-font">一句话，为您搞定一切。</span>
           </Typography>
+          <Typography
+            variant="body1"
+            sx={{ color: 'grey.400', mt: 1, textAlign: 'center' }}
+          >
+            千亿参数大模型无缝集成，数十项细分功能，贴近最原始使用场景，沉浸式超级全能
+            AI 助手。
+          </Typography>
           {/* PC */}
           <Box
             textAlign="center"
@@ -175,6 +182,7 @@ export default function First() {
                     texts={[
                       '一处聊天，同时调用多个模型，选择最佳答案 ',
                       'AI 编码，无需人类插手 ',
+                      '全平台一体化人工智能助手 ',
                     ]}
                   />
                 )}
@@ -255,6 +263,7 @@ export default function First() {
                       texts={[
                         '一处聊天，同时调用多个模型，选择最佳答案 ',
                         'AI 编码，无需人类插手 ',
+                        '全平台一体化人工智能助手 ',
                       ]}
                     />
                   </div>
@@ -333,7 +342,7 @@ export default function First() {
                 </div>
               </Box>
 
-              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+              <Box sx={{ width: { xs: '100%', md: 'auto' } }}>
                 <div className="first-page-input-tips">
                   帮我分析一下这个SQL查询语句
                   <KeyboardArrowRightIcon className="icon" />
@@ -354,15 +363,6 @@ export default function First() {
             </Box>
           </Box>
         </Stack>
-        <Box
-          sx={{
-            width: { sm: '100%', md: '100%' },
-            textAlign: 'center',
-            overflow: 'hidden',
-          }}
-        >
-          {/* <RollPlay /> */}
-        </Box>
       </Container>
     </Box>
   );

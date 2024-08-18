@@ -101,7 +101,8 @@ export default function Four() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          <span className="cortex-font">我们的用户对 Cortex 的评价</span>
+          {/* <span className="cortex-font">我们的用户对 Cortex 的评价</span> */}
+          <span className="cortex-font">用户评价</span>
         </Typography>
         <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
           200+评价，平均评分4.5

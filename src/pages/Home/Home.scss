@@ -317,4 +317,35 @@
       }
     }
   }
+  #logoCollection {
+    .scroll-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap; /* 防止换行 */
+      display: flex;
+      position: relative;
+      .scroll-content {
+        animation: logo-scroll-left 50s linear infinite;
+        // &:hover {
+        //   animation-play-state: paused;
+        // }
+        @keyframes logo-scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        > img {
+          opacity: 0.5;
+          filter: grayscale(100%);
+          transition: all 0.5s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

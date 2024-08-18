@@ -2,12 +2,16 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
 import { useTheme } from '@mui/system';
 
 const whiteLogos = [
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d520d0517ae8e8ddf13_Bern-white.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f46794c159024c1af6d44_Montreal-white.svg',
+  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e891fa22f89efd7477a_TerraLight.svg',
+  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a09d1f6337b1dfed14ab_colorado-white.svg',
+  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5caa77bf7d69fb78792e_Ankara-white.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e891fa22f89efd7477a_TerraLight.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a09d1f6337b1dfed14ab_colorado-white.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5caa77bf7d69fb78792e_Ankara-white.svg',
@@ -20,13 +24,15 @@ const darkLogos = [
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e911fa22f2203d7514c_TerraDark.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a0990f3717787fd49245_colorado-black.svg',
   'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg',
+  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e911fa22f2203d7514c_TerraDark.svg',
+  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a0990f3717787fd49245_colorado-black.svg',
+  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg',
 ];
 
 const logoStyle = {
   width: '100px',
-  height: '80px',
+  height: '50px',
   margin: '0 32px',
-  opacity: 0.7,
 };
 
 export default function LogoCollection() {
@@ -34,26 +40,55 @@ export default function LogoCollection() {
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
   return (
-    <Box id="logoCollection" sx={{ py: 4 }}>
-      {/* <Typography
-        component="p"
-        variant="subtitle2"
-        align="center"
-        color="text.secondary"
+    <Box
+      id="logoCollection"
+      sx={{ width: '100%', pb: { xs: 4, md: 8 }, position: 'relative' }}
+    >
+      <Container
+        sx={{
+          position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
       >
-        Trusted by the best companies
-      </Typography> */}
-      <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
-        {logos.map((logo, index) => (
-          <Grid item key={index}>
-            <img
-              src={logo}
-              alt={`Fake company number ${index + 1}`}
-              style={logoStyle}
-            />
-          </Grid>
-        ))}
-      </Grid>
+        <Box sx={{ opacity: 0.6 }} className="scroll-container">
+          <div className="scroll-content">
+            {logos.map((logo, index) => (
+              <img src={logo} alt={`logo`} key={index} style={logoStyle} />
+            ))}
+          </div>
+          <div className="scroll-content">
+            {logos.map((logo, index) => (
+              <img src={logo} alt={`logo`} key={index} style={logoStyle} />
+            ))}
+          </div>
+        </Box>
+        <div
+          className="pointer-pass"
+          style={{
+            height: '100%',
+            width: '40%',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            background:
+              'linear-gradient(90deg, #FFFFFF 10.62%, rgba(255, 255, 255, 0) 100%)',
+          }}
+        ></div>
+        <div
+          className="pointer-pass"
+          style={{
+            height: '100%',
+            width: '40%',
+            position: 'absolute',
+            right: 0,
+            top: 0,
+            background:
+              'linear-gradient(270deg, #FFFFFF 10.62%, rgba(255, 255, 255, 0) 100%)',
+          }}
+        ></div>
+      </Container>
     </Box>
   );
 }

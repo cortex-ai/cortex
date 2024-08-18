@@ -76,10 +76,14 @@ export default function Three() {
           }}
         >
           <Typography component="h2" variant="h4">
-            <span className="cortex-font">随处可用，随时可用</span>
+            {/* <span className="cortex-font">随处可用，随时可用</span> */}
+            <span className="cortex-font">一站式解决方案</span>
           </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
-            你需要的功能，我们都有
+          <Typography
+            variant="body1"
+            sx={{ color: 'grey.400', mt: 1, textAlign: 'center' }}
+          >
+            全能 AI 助手
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

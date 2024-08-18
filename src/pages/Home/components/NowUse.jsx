@@ -47,7 +47,7 @@ export default function NowUse() {
             background: 'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)',
           }}
         >
-          <span className="cortex-font">解锁 AI 原力</span>
+          <span className="cortex-font">开启 AI 原力</span>
         </Button>
       </Box>
     </Container>

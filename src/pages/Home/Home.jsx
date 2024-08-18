@@ -56,10 +56,10 @@ const Home = () => {
         <Box sx={{ bgcolor: 'background.default' }}>
           {/* <Divider /> */}
           <Second />
-          <Divider />
+          {/* <Divider /> */}
           <LogoCollection />
           {/* <Features /> */}
-          <Divider />
+          {/* <Divider /> */}
           <Three />
           <Four />
           <Five />

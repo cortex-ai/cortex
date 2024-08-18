@@ -44,3 +44,31 @@
   background: linear-gradient(-180deg, rgba(255, 255, 255, 0) 0, #ffffff 100%);
   pointer-events: none;
 }
+
+/* 文字单行省略号 */
+.single-omit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 文字多行省略号 */
+.multiple-omit {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* 文字多了自動換行 */
+.break-word {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+// 点击缩放
+.click-scale:active {
+  transform: scale(0.95);
+  opacity: 0.95;
+  transition: 100ms;
+}

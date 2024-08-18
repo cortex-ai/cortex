@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import getLPTheme from '@/theme/getLPTheme';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Bot from './components/Bot';
+import Bot from './components/Bot/Bot';
 
 const Dashboard = () => {
   const [mode, setMode] = React.useState('light');

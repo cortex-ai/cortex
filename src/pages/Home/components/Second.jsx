@@ -20,11 +20,14 @@ export default function First() {
   const [alignment, setAlignment] = React.useState('chat');
 
   const handleChange = (event, newAlignment) => {
-    setAlignment(newAlignment);
+    if (newAlignment !== null) {
+      setAlignment(newAlignment);
+    }
   };
   const text = {
     chat: '在一处即可与所有顶尖模型同时聊天。',
-    code: 'AI 编码，无需人类插手',
+    search: '新一代智能答案搜索引擎',
+    code: 'AI 编码大师，无需人类插手',
     voice: 'Hi，我是你的语音助手',
   };
 
@@ -51,11 +54,12 @@ export default function First() {
           flexDirection: 'column',
           alignItems: 'center',
           pt: { xs: 3, sm: 5 },
-          pb: { xs: 8, sm: 10 },
+          pb: { xs: 4, sm: 4 },
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          <span className="cortex-font">全能 AI 助手</span>
+          {/* <span className="cortex-font">全能 AI 助手</span> */}
+          <span className="cortex-font">使用场景</span>
         </Typography>
 
         {/* <Typography
@@ -80,13 +84,17 @@ export default function First() {
           aria-label="Platform"
         >
           <ToggleButton value="chat">
-            <span className="cortex-font">多模型群聊</span>
+            {/* <span className="cortex-font">多模型群聊</span> */}
+            <span className="cortex-font">AI对话</span>
+          </ToggleButton>
+          <ToggleButton value="search">
+            <span className="cortex-font">AI搜索</span>
           </ToggleButton>
           <ToggleButton value="code">
-            <span className="cortex-font">AI 编码大师</span>
+            <span className="cortex-font">AI编码</span>
           </ToggleButton>
           <ToggleButton value="voice">
-            <span className="cortex-font">智能语音助手</span>
+            <span className="cortex-font">AI语音</span>
           </ToggleButton>
         </ToggleButtonGroup>
         <Typography
