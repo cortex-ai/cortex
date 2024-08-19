@@ -92,28 +92,29 @@ const MenuList = () => {
       <Box className="bot-page-menu-top" onClick={() => navigate('/')}>
         <img src={Cortex} alt="Cortex" />
       </Box>
-      <Divider sx={{ width: '70%', ml: 0.6, borderColor: '#ffffff' }} />
+      <Divider sx={{ width: '70%', ml: 0.6 }} />
       <Box className="bot-page-menu-container">
         {icons.map((icon, index) => (
-          <Tooltip
-            title={icon.name}
-            arrow
-            placement="left"
-            TransitionComponent={Zoom}
+          // <Tooltip
+          //   title={icon.name}
+          //   arrow
+          //   placement="left"
+          //   TransitionComponent={Zoom}
+          //   key={icon.id}
+          // >
+          <div
             key={icon.id}
+            onMouseOver={() => handleMouseOver(index)}
+            onMouseLeave={handleMouseLeave}
+            style={getScaleStyle(index)}
+            onClick={() => handleClick(icon.path)}
+            className={`bot-page-menu-item ${
+              location.pathname === icon.path ? 'active' : ''
+            }`}
           >
-            <div
-              onMouseOver={() => handleMouseOver(index)}
-              onMouseLeave={handleMouseLeave}
-              style={getScaleStyle(index)}
-              onClick={() => handleClick(icon.path)}
-              className={`bot-page-menu-item ${
-                location.pathname === icon.path ? 'active' : ''
-              }`}
-            >
-              <img src={icon.icon} alt={icon.name} />
-            </div>
-          </Tooltip>
+            <img src={icon.icon} alt={icon.name} />
+          </div>
+          // </Tooltip>
         ))}
       </Box>
     </Box>
