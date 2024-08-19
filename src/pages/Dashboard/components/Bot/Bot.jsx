@@ -29,12 +29,7 @@ import Chatgpt from '@/assets/images/chatgpt.svg';
 import Claude from '@/assets/images/claude.svg';
 import Gemini from '@/assets/images/gemini.svg';
 
-import BotChat from '@/assets/images/bot-chat.svg';
-import BotSearch from '@/assets/images/bot-search.svg';
-import BotCoding from '@/assets/images/bot-coding.svg';
-import BotVoice from '@/assets/images/bot-voice.svg';
-
-import Paper from '@mui/material/Paper';
+import MenuList from '../MenuList/MenuList';
 
 import './Bot.scss';
 
@@ -113,28 +108,7 @@ export default function Bot() {
       >
         {/* 右侧导航 */}
         <Stack className="bot-page-menu" spacing={0} useFlexGap>
-          <Box className="bot-page-menu-top" onClick={() => navigate('/')}>
-            <img src={Cortex} alt="Cortex" />
-          </Box>
-          <Divider />
-          <Box className="bot-page-menu-bottom">
-            <div>
-              {/* <ChatIcon /> */}
-              <img src={BotChat} alt="BotChat" />
-            </div>
-            <div>
-              {/* <ScreenSearchDesktopIcon /> */}
-              <img src={BotSearch} alt="BotSearch" />
-            </div>
-            <div>
-              {/* <CodeIcon /> */}
-              <img src={BotCoding} alt="BotCoding" />
-            </div>
-            <div>
-              {/* <WhatsAppIcon /> */}
-              <img src={BotVoice} alt="BotVoice" />
-            </div>
-          </Box>
+          <MenuList />
         </Stack>
 
         <Stack
@@ -148,7 +122,8 @@ export default function Bot() {
             p: { xs: '1rem 0', md: '1.5rem 0' },
           }}
         >
-          <Box>
+          {/* 对话记录 */}
+          <Box sx={{ position: 'relative' }}>
             <Box
               className="session-record"
               sx={{ m: { xs: '2rem 0', md: '4rem 0' } }}
@@ -285,7 +260,7 @@ export default function Bot() {
           <Box>
             <div className="bot-page-stop-response cortex-font no-select">
               <NotInterestedIcon className="stop-icon" />
-              <span className="cortex-font">停止响应</span>
+              <span className="cortex-font">停止生成</span>
             </div>
           </Box>
           {/* 回到底部 */}
@@ -294,7 +269,17 @@ export default function Bot() {
           </Box>
           {/* 提示词 */}
           {isFocused ? (
-            ''
+            <Box
+              className="cortex-font"
+              style={{
+                fontWeight: '300',
+                padding: '10px 0 0 2px',
+                opacity: '0.8',
+                fontSize: '0.8rem',
+              }}
+            >
+              快捷键 @ 可以快速指定AI模型
+            </Box>
           ) : (
             <Box className="bot-page-input-quick-helper no-select">
               <div className="bot-page-quick-prompt">
@@ -405,18 +390,20 @@ export default function Bot() {
                     sx={{
                       height: '16px',
                       mr: '0.5rem',
+                      mt: '10px',
                     }}
                     className="btn"
                     variant="middle"
                     orientation="vertical"
                     flexItem
                   />
-                  <AddCircleOutlineIcon
-                    className="btn file"
+                  <div className="btn file"></div>
+                  {/* <AddCircleOutlineIcon
+                    className="btn add click-scale"
                     style={{
                       cursor: 'pointer',
                     }}
-                  />
+                  /> */}
                   {/* <FileOpenIcon
                     className="btn file"
                     style={{

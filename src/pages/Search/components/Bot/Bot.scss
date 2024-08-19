@@ -1,4 +1,4 @@
-#bot-page {
+#translate-page {
   position: relative;
   overflow: hidden;
   // 会话记录
@@ -325,5 +325,110 @@
     top: 40%;
     right: 20px;
     transform: translateY(-50%);
+    width: 60px;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    // opacity: 0.3;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+    &:hover {
+      opacity: 1;
+    }
+
+    .bot-page-menu-top {
+      cursor: pointer;
+      margin-bottom: 10px;
+      text-align: center;
+      img {
+        width: 90%;
+      }
+    }
+    .bot-page-menu-bottom {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      .bot-page-menu-item {
+        width: 100%;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &.active {
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 12px;
+            border-radius: 2px;
+            background: -webkit-linear-gradient(
+              -45deg,
+              #f89b29 0%,
+              #ff0f7b 100%
+            );
+          }
+          .bot-page-menu-bg {
+            background: -webkit-linear-gradient(
+              -45deg,
+              #f89b29 0%,
+              #ff0f7b 100%
+            );
+          }
+        }
+        &:nth-child(1) {
+          .bot-page-menu-bg {
+            mask: url(../../../../assets/images/bot-chat.svg#star);
+            mask-size: cover;
+          }
+        }
+        &:nth-child(2) {
+          .bot-page-menu-bg {
+            mask: url(../../../../assets/images/bot-translate.svg#star);
+            mask-size: cover;
+          }
+        }
+        &:nth-child(3) {
+          .bot-page-menu-bg {
+            mask: url(../../../../assets/images/bot-search.svg#star);
+            mask-size: cover;
+          }
+        }
+        &:nth-child(4) {
+          .bot-page-menu-bg {
+            mask: url(../../../../assets/images/bot-coding.svg#star);
+            mask-size: cover;
+          }
+        }
+        &:nth-child(5) {
+          .bot-page-menu-bg {
+            mask: url(../../../../assets/images/bot-voice.svg#star);
+            mask-size: cover;
+          }
+        }
+        &:nth-child(6) {
+          .bot-page-menu-bg {
+            mask: url(../../../../assets/images/bot-ocr.svg#star);
+            mask-size: cover;
+          }
+        }
+      }
+      .bot-page-menu-bg {
+        width: 80%;
+        aspect-ratio: 1/1;
+        background-image: linear-gradient(-45deg, #4078fc, #7acbfe);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }
