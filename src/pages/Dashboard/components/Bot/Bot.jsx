@@ -23,6 +23,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import CodeIcon from '@mui/icons-material/Code';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 import Cortex from '/logo.svg';
 import Chatgpt from '@/assets/images/chatgpt.svg';
@@ -258,14 +259,14 @@ export default function Bot() {
           <Box className="line-mask"></Box>
           {/* 聊天停止 */}
           <Box>
-            <div className="bot-page-stop-response cortex-font no-select">
+            <div className="bot-page-stop-response cortex-font no-select click-scale">
               <NotInterestedIcon className="stop-icon" />
-              <span className="cortex-font">停止生成</span>
+              <span className="cortex-font">终止生成</span>
             </div>
           </Box>
           {/* 回到底部 */}
           <Box className="bot-page-to-bottom-btn no-select click-scale">
-            <ArrowDownwardIcon className="bottom-icon" />
+            <KeyboardDoubleArrowDownIcon className="bottom-icon" />
           </Box>
           {/* 提示词 */}
           {isFocused ? (
@@ -285,6 +286,18 @@ export default function Bot() {
               <div className="bot-page-quick-prompt">
                 <AutoAwesomeIcon className="icon" />
                 <span>提示词模版</span>
+              </div>
+              <div className="bot-page-talk-summary">
+                <CommentIcon className="icon" />
+                <span>对话总结</span>
+              </div>
+              <div className="bot-page-talk-summary">
+                <CommentIcon className="icon" />
+                <span>对话总结</span>
+              </div>
+              <div className="bot-page-talk-summary">
+                <CommentIcon className="icon" />
+                <span>对话总结</span>
               </div>
               <div className="bot-page-talk-summary">
                 <CommentIcon className="icon" />
@@ -319,7 +332,13 @@ export default function Bot() {
                   placeholder={`输入问题，让 ${selectedModel?.name} 帮你解决`}
                   value={inputValue}
                   onChange={handleChange}
-                  sx={{ flex: 1, width: '100%', lineHeight: '1.8em' }}
+                  sx={{
+                    flex: 1,
+                    width: '100%',
+                    lineHeight: '1.8em',
+                    transition: 'min-height 0.2s linear,',
+                    minHeight: isFocused ? '5.4em' : '3.6em',
+                  }}
                   inputProps={{ 'aria-label': 'search' }}
                   onBlur={() => {
                     if (!inputValue) {
