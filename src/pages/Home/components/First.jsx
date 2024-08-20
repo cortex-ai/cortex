@@ -352,14 +352,10 @@ export default function First() {
                 </div>
               </Box>
 
-<<<<<<< HEAD
-              <Box sx={{ width: { xs: '100%', md: 'auto' } }}>
-=======
               <Box
                 sx={{ width: { xs: '100%', md: 'auto' } }}
                 onClick={() => navigate('/dashboard')}
               >
->>>>>>> develop
                 <div className="first-page-input-tips">
                   帮我分析一下这个SQL查询语句
                   <ArrowOutwardIcon className="icon" />

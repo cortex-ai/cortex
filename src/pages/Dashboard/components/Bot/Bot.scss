@@ -44,11 +44,7 @@
       transform: translateX(-50%);
       text-align: center;
       border: 1px solid rgba(191, 204, 217, 0.5);
-<<<<<<< HEAD
-      color: #4078fc;
-=======
       color: #4c5967;
->>>>>>> develop
       background: #ffffff;
       border-radius: 10px;
       padding: 6px 15px;
@@ -56,17 +52,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-<<<<<<< HEAD
-      transition: all 0.2s linear;
-      &:hover {
-        padding: 6px 20px;
-        border: 1px solid #4078fc;
-        color: #4078fc;
-      }
-      .stop-icon {
-        font-size: 18px;
-        margin-right: 5px;
-=======
       &:hover {
         border: 1px solid #4078fc;
         color: #4078fc;
@@ -81,7 +66,6 @@
         font-size: 18px;
         margin-right: 5px;
         margin-bottom: 1px;
->>>>>>> develop
       }
     }
     .bot-page-to-bottom-btn {
@@ -89,13 +73,8 @@
       position: absolute;
       right: 0;
       top: -35px;
-<<<<<<< HEAD
-      border: 1px solid rgba(191, 204, 217, 0.5);
-      background: #ffffff;
-=======
       // border: 1px solid rg ba(191, 204, 217, 0.5);
       // background: #ffffff;
->>>>>>> develop
       border-radius: 50%;
       height: 38px;
       aspect-ratio: 1/1;
@@ -103,19 +82,12 @@
       align-items: center;
       justify-content: center;
       color: #4c5967;
-<<<<<<< HEAD
-=======
       font-weight: 300;
->>>>>>> develop
       &:hover {
         color: #4078fc;
       }
       .bottom-icon {
-<<<<<<< HEAD
-        font-size: 18px;
-=======
         font-size: 22px;
->>>>>>> develop
       }
     }
     .bot-page-input-quick-helper {
@@ -123,11 +95,8 @@
       justify-content: flex-start;
       gap: 10px;
       overflow-x: auto;
-<<<<<<< HEAD
-=======
       scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
->>>>>>> develop
       padding-top: 10px;
       &::-webkit-scrollbar {
         display: none !important;
@@ -157,20 +126,6 @@
         .icon {
           color: #f89b29;
         }
-<<<<<<< HEAD
-        &:hover {
-          color: #ffffff;
-          border-image-slice: 1;
-          background: -webkit-linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-          background-size: cover;
-          border: 1px solid rgba(191, 204, 217, 0);
-          .icon {
-            transition: all 0.2s linear;
-            color: #ffffff;
-          }
-        }
-=======
->>>>>>> develop
       }
       .bot-page-talk-summary {
         .icon {
@@ -349,12 +304,6 @@
           pointer-events: none;
         }
         &.file {
-<<<<<<< HEAD
-          color: rgba($color: #4c5967, $alpha: 0.5);
-          &:hover {
-            color: #4078fc;
-            transform: scale(1.1);
-=======
           margin: 0 10px 0 2px;
           aspect-ratio: 1/1;
           height: 18px;
@@ -372,7 +321,6 @@
           }
           &:active {
             transform: scale(0.98);
->>>>>>> develop
           }
         }
       }
@@ -380,54 +328,10 @@
   }
   // 菜单
   .bot-page-menu {
-<<<<<<< HEAD
-    position: fixed;
-    top: 40%;
-    right: 30px;
-    transform: translateY(-50%);
-    width: 60px;
-    border-radius: 12px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    .bot-page-menu-top {
-      cursor: pointer;
-      margin-bottom: 5px;
-      text-align: center;
-      img {
-        width: 90%;
-      }
-    }
-    .bot-page-menu-bottom {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      > div {
-        padding: 10px;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.1);
-        }
-        img {
-          width: 25px;
-          filter: grayscale(100%);
-        }
-      }
-    }
-=======
     z-index: 10;
     position: fixed;
     top: 40%;
     right: 20px;
     transform: translateY(-50%);
->>>>>>> develop
   }
 }

@@ -23,26 +23,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import CodeIcon from '@mui/icons-material/Code';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-<<<<<<< HEAD
-=======
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
->>>>>>> develop
 
 import Cortex from '/logo.svg';
 import Chatgpt from '@/assets/images/chatgpt.svg';
 import Claude from '@/assets/images/claude.svg';
 import Gemini from '@/assets/images/gemini.svg';
 
-<<<<<<< HEAD
-import BotChat from '@/assets/images/bot-chat.svg';
-import BotSearch from '@/assets/images/bot-search.svg';
-import BotCoding from '@/assets/images/bot-coding.svg';
-import BotVoice from '@/assets/images/bot-voice.svg';
-
-import Paper from '@mui/material/Paper';
-=======
 import MenuList from '../MenuList/MenuList';
->>>>>>> develop
 
 import './Bot.scss';
 
@@ -121,32 +109,7 @@ export default function Bot() {
       >
         {/* 右侧导航 */}
         <Stack className="bot-page-menu" spacing={0} useFlexGap>
-<<<<<<< HEAD
-          <Box className="bot-page-menu-top" onClick={() => navigate('/')}>
-            <img src={Cortex} alt="Cortex" />
-          </Box>
-          <Divider />
-          <Box className="bot-page-menu-bottom">
-            <div>
-              {/* <ChatIcon /> */}
-              <img src={BotChat} alt="BotChat" />
-            </div>
-            <div>
-              {/* <ScreenSearchDesktopIcon /> */}
-              <img src={BotSearch} alt="BotSearch" />
-            </div>
-            <div>
-              {/* <CodeIcon /> */}
-              <img src={BotCoding} alt="BotCoding" />
-            </div>
-            <div>
-              {/* <WhatsAppIcon /> */}
-              <img src={BotVoice} alt="BotVoice" />
-            </div>
-          </Box>
-=======
           <MenuList />
->>>>>>> develop
         </Stack>
 
         <Stack
@@ -160,12 +123,8 @@ export default function Bot() {
             p: { xs: '1rem 0', md: '1.5rem 0' },
           }}
         >
-<<<<<<< HEAD
-          <Box>
-=======
           {/* 对话记录 */}
           <Box sx={{ position: 'relative' }}>
->>>>>>> develop
             <Box
               className="session-record"
               sx={{ m: { xs: '2rem 0', md: '4rem 0' } }}
@@ -300,26 +259,13 @@ export default function Bot() {
           <Box className="line-mask"></Box>
           {/* 聊天停止 */}
           <Box>
-<<<<<<< HEAD
-            <div className="bot-page-stop-response cortex-font no-select">
-              <NotInterestedIcon className="stop-icon" />
-              <span className="cortex-font">停止响应</span>
-=======
             <div className="bot-page-stop-response cortex-font no-select click-scale">
               <NotInterestedIcon className="stop-icon" />
               <span className="cortex-font">终止生成</span>
->>>>>>> develop
             </div>
           </Box>
           {/* 回到底部 */}
           <Box className="bot-page-to-bottom-btn no-select click-scale">
-<<<<<<< HEAD
-            <ArrowDownwardIcon className="bottom-icon" />
-          </Box>
-          {/* 提示词 */}
-          {isFocused ? (
-            ''
-=======
             <KeyboardDoubleArrowDownIcon className="bottom-icon" />
           </Box>
           {/* 提示词 */}
@@ -335,7 +281,6 @@ export default function Bot() {
             >
               快捷键 @ 可以快速指定AI模型
             </Box>
->>>>>>> develop
           ) : (
             <Box className="bot-page-input-quick-helper no-select">
               <div className="bot-page-quick-prompt">
@@ -346,8 +291,6 @@ export default function Bot() {
                 <CommentIcon className="icon" />
                 <span>对话总结</span>
               </div>
-<<<<<<< HEAD
-=======
               <div className="bot-page-talk-summary">
                 <CommentIcon className="icon" />
                 <span>对话总结</span>
@@ -360,7 +303,6 @@ export default function Bot() {
                 <CommentIcon className="icon" />
                 <span>对话总结</span>
               </div>
->>>>>>> develop
             </Box>
           )}
 
@@ -390,9 +332,6 @@ export default function Bot() {
                   placeholder={`输入问题，让 ${selectedModel?.name} 帮你解决`}
                   value={inputValue}
                   onChange={handleChange}
-<<<<<<< HEAD
-                  sx={{ flex: 1, width: '100%', lineHeight: '1.8em' }}
-=======
                   sx={{
                     flex: 1,
                     width: '100%',
@@ -400,7 +339,6 @@ export default function Bot() {
                     transition: 'min-height 0.2s linear,',
                     minHeight: isFocused ? '5.4em' : '3.6em',
                   }}
->>>>>>> develop
                   inputProps={{ 'aria-label': 'search' }}
                   onBlur={() => {
                     if (!inputValue) {
@@ -471,24 +409,13 @@ export default function Bot() {
                     sx={{
                       height: '16px',
                       mr: '0.5rem',
-<<<<<<< HEAD
-=======
                       mt: '10px',
->>>>>>> develop
                     }}
                     className="btn"
                     variant="middle"
                     orientation="vertical"
                     flexItem
                   />
-<<<<<<< HEAD
-                  <AddCircleOutlineIcon
-                    className="btn file"
-                    style={{
-                      cursor: 'pointer',
-                    }}
-                  />
-=======
                   <div className="btn file"></div>
                   {/* <AddCircleOutlineIcon
                     className="btn add click-scale"
@@ -496,7 +423,6 @@ export default function Bot() {
                       cursor: 'pointer',
                     }}
                   /> */}
->>>>>>> develop
                   {/* <FileOpenIcon
                     className="btn file"
                     style={{
