@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
@@ -12,6 +13,8 @@ import Drawer from '@mui/material/Drawer';
 import SegmentOutlinedIcon from '@mui/icons-material/SegmentOutlined';
 import ToggleColorMode from './ToggleColorMode';
 
+import MenuRight from '@/assets/images/menu-right.svg';
+
 const logoStyle = {
   height: '25px',
   with: 'auto',
@@ -20,6 +23,7 @@ const logoStyle = {
 };
 
 function HeaderBar({ mode, toggleColorMode }) {
+  const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -61,7 +65,7 @@ function HeaderBar({ mode, toggleColorMode }) {
               justifyContent: 'space-between',
               flexShrink: 0,
               maxHeight: 40,
-              pr: 1,
+              pr: 0.2,
             })}
           >
             <Box
@@ -148,9 +152,14 @@ function HeaderBar({ mode, toggleColorMode }) {
                 color="primary"
                 aria-label="menu"
                 onClick={toggleDrawer(true)}
-                sx={{ minWidth: '30px', p: '4px' }}
+                sx={{ minWidth: '30px', p: 0 }}
               >
-                <SegmentOutlinedIcon />
+                {/* <SegmentOutlinedIcon /> */}
+                <img
+                  src={MenuRight}
+                  alt="MenuRight"
+                  style={{ height: '15px' }}
+                />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                 <Box
@@ -202,7 +211,10 @@ function HeaderBar({ mode, toggleColorMode }) {
                       Sign up
                     </Button>
                   </MenuItem> */}
-                  <MenuItem>
+                  <Box
+                    sx={{ p: '6px 16px' }}
+                    onClick={() => navigate('/dashboard')}
+                  >
                     <Button
                       component="a"
                       target="_blank"
@@ -214,9 +226,9 @@ function HeaderBar({ mode, toggleColorMode }) {
                           'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)',
                       }}
                     >
-                      <span className="cortex-font">登 录</span>
+                      <span className="cortex-font">开 始</span>
                     </Button>
-                  </MenuItem>
+                  </Box>
                 </Box>
               </Drawer>
             </Box>

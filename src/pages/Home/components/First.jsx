@@ -19,10 +19,12 @@ import Star3 from '@/assets/images/star-3.svg';
 import Star4 from '@/assets/images/star-4.svg';
 import Star5 from '@/assets/images/star-5.svg';
 import Star6 from '@/assets/images/star-6.svg';
+import BotAI from '@/assets/images/bot-ai.svg';
 
 import WebhookIcon from '@mui/icons-material/Webhook';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import ArrowOutwardIcon from '@mui/icons-material/NorthEast';
 
 export default function First() {
   const navigate = useNavigate();
@@ -66,11 +68,13 @@ export default function First() {
           className="first-page-logo-tips no-select"
           onClick={() => navigate('/dashboard')}
         >
-          <WebhookIcon
-            sx={{ height: '18px', marginRight: '3px' }}
-            className="icon"
+          <img
+            src={BotAI}
+            alt="BotAI"
+            style={{ height: '20px', marginRight: '7px' }}
           />
-          <span className="cortex-font">启用 AI 原力</span>
+          {/* <span className="cortex-font">启用 AI 原力 FREE AI</span> */}
+          <span className="cortex-font">Free Q & A Engine</span>
           <div className="star star-1">
             <img src={Star1} alt="Star 1" />
           </div>
@@ -328,36 +332,55 @@ export default function First() {
                 mt: { xs: 2, md: 4 },
               }}
             >
-              <Box sx={{ width: { xs: '100%', md: 'auto' } }}>
+              <Box
+                sx={{ width: { xs: '100%', md: 'auto' } }}
+                onClick={() => navigate('/dashboard')}
+              >
                 <div className="first-page-input-tips first-page-input-tips-active">
                   <LocalFireDepartmentIcon className="pre-icon" />
                   帮我生成 {new Date().getFullYear()} 年度工作计划
-                  <KeyboardArrowRightIcon className="icon" />
+                  <ArrowOutwardIcon className="icon" />
                 </div>
               </Box>
-              <Box sx={{ width: { xs: '100%', md: 'auto' } }}>
+              <Box
+                sx={{ width: { xs: '100%', md: 'auto' } }}
+                onClick={() => navigate('/dashboard')}
+              >
                 <div className="first-page-input-tips">
                   帮我写一份互联网运营计划报告
-                  <KeyboardArrowRightIcon className="icon" />
+                  <ArrowOutwardIcon className="icon" />
                 </div>
               </Box>
 
+<<<<<<< HEAD
               <Box sx={{ width: { xs: '100%', md: 'auto' } }}>
+=======
+              <Box
+                sx={{ width: { xs: '100%', md: 'auto' } }}
+                onClick={() => navigate('/dashboard')}
+              >
+>>>>>>> develop
                 <div className="first-page-input-tips">
                   帮我分析一下这个SQL查询语句
-                  <KeyboardArrowRightIcon className="icon" />
+                  <ArrowOutwardIcon className="icon" />
                 </div>
               </Box>
-              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+              <Box
+                sx={{ display: { xs: 'none', md: 'block' } }}
+                onClick={() => navigate('/dashboard')}
+              >
                 <div className="first-page-input-tips">
                   帮我优化一下简历
-                  <KeyboardArrowRightIcon className="icon" />
+                  <ArrowOutwardIcon className="icon" />
                 </div>
               </Box>
-              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+              <Box
+                sx={{ display: { xs: 'none', md: 'block' } }}
+                onClick={() => navigate('/dashboard')}
+              >
                 <div className="first-page-input-tips">
                   帮我解答生活百科知识
-                  <KeyboardArrowRightIcon className="icon" />
+                  <ArrowOutwardIcon className="icon" />
                 </div>
               </Box>
             </Box>
