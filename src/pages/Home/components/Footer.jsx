@@ -72,7 +72,7 @@ export default function Footer() {
               <span className="cortex-font">Cortex AI</span>
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              <span className="cortex-font">Hi，我是你的全能 AI 助手。</span>
+              <span>Hi，我是你的全能 AI 助手。</span>
             </Typography>
             <Stack
               direction="row"

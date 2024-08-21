@@ -96,7 +96,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    <span className="cortex-font">功能</span>
+                    <span>功能</span>
                   </Typography>
                 </MenuItem>
 
@@ -105,7 +105,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    <span className="cortex-font">方案</span>
+                    <span>方案</span>
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -113,7 +113,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    <span className="cortex-font">评价</span>
+                    <span>评价</span>
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -121,7 +121,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    <span className="cortex-font">Pro</span>
+                    <span>Pro</span>
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -129,7 +129,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    <span className="cortex-font">了解</span>
+                    <span>了解</span>
                   </Typography>
                 </MenuItem>
               </Box>
@@ -184,19 +184,19 @@ function HeaderBar({ mode, toggleColorMode }) {
                     />
                   </Box> */}
                   <MenuItem onClick={() => scrollToSection('features')}>
-                    <span className="cortex-font">功能</span>
+                    <span>功能</span>
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('four')}>
-                    <span className="cortex-font">评价</span>
+                    <span>评价</span>
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('three')}>
-                    <span className="cortex-font">方案</span>
+                    <span>方案</span>
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('five')}>
-                    <span className="cortex-font">Pro</span>
+                    <span>Pro</span>
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('faq')}>
-                    <span className="cortex-font">了解</span>
+                    <span>了解</span>
                   </MenuItem>
                   <Divider />
                   {/* <MenuItem>
