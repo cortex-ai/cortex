@@ -73,8 +73,7 @@ export default function First() {
             alt="BotAI"
             style={{ height: '20px', marginRight: '7px' }}
           />
-          {/* <span className="cortex-font">启用 AI 原力 FREE AI</span> */}
-          <span className="cortex-font">Free Q & A Engine</span>
+          <span>Free Q & A Engine</span>
           <div className="star star-1">
             <img src={Star1} alt="Star 1" />
           </div>
@@ -210,10 +209,7 @@ export default function First() {
                     'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)',
                 }}
               >
-                <span
-                  className="cortex-font"
-                  style={{ display: 'flex', alignItems: 'center' }}
-                >
+                <span style={{ display: 'flex', alignItems: 'center' }}>
                   <AutoAwesomeIcon
                     style={{ fontSize: '1.2rem', margin: '0 3px 3px 0' }}
                   />
@@ -304,10 +300,7 @@ export default function First() {
                       'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)',
                   }}
                 >
-                  <span
-                    className="cortex-font"
-                    style={{ display: 'flex', alignItems: 'center' }}
-                  >
+                  <span style={{ display: 'flex', alignItems: 'center' }}>
                     <AutoAwesomeIcon
                       style={{ fontSize: '1.2rem', margin: '0 3px 3px 0' }}
                     />

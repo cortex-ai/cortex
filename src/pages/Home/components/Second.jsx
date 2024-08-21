@@ -85,16 +85,16 @@ export default function First() {
         >
           <ToggleButton value="chat">
             {/* <span className="cortex-font">多模型群聊</span> */}
-            <span className="cortex-font">AI对话</span>
+            <span>AI对话</span>
           </ToggleButton>
           <ToggleButton value="search">
-            <span className="cortex-font">AI搜索</span>
+            <span>AI搜索</span>
           </ToggleButton>
           <ToggleButton value="code">
-            <span className="cortex-font">AI编码</span>
+            <span>AI编码</span>
           </ToggleButton>
           <ToggleButton value="voice">
-            <span className="cortex-font">AI语音</span>
+            <span>AI语音</span>
           </ToggleButton>
         </ToggleButtonGroup>
         <Typography

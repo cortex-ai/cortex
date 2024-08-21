@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -81,6 +81,24 @@ export default function Bot() {
     if (modelData && modelData.length > 0) {
       setSelectedModel(modelData[0]);
     }
+  }, []);
+
+  const modelBoxRef = useRef(null);
+  const handleClickOutside = (event) => {
+    if (
+      modelBoxRef.current &&
+      !modelBoxRef.current.contains(event.target) &&
+      !event.target.closest('.bot-page-input-btn')
+    ) {
+      setIsOpenModel(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   return (
@@ -259,9 +277,9 @@ export default function Bot() {
           <Box className="line-mask"></Box>
           {/* 聊天停止 */}
           <Box>
-            <div className="bot-page-stop-response cortex-font no-select click-scale">
+            <div className="bot-page-stop-response no-select click-scale">
               <NotInterestedIcon className="stop-icon" />
-              <span className="cortex-font">终止生成</span>
+              <span>终止生成</span>
             </div>
           </Box>
           {/* 回到底部 */}
@@ -271,9 +289,7 @@ export default function Bot() {
           {/* 提示词 */}
           {isFocused ? (
             <Box
-              className="cortex-font"
               style={{
-                fontWeight: '300',
                 padding: '10px 0 0 2px',
                 opacity: '0.8',
                 fontSize: '0.8rem',
@@ -336,8 +352,8 @@ export default function Bot() {
                     flex: 1,
                     width: '100%',
                     lineHeight: '1.8em',
-                    transition: 'min-height 0.2s linear,',
-                    minHeight: isFocused ? '5.4em' : '3.6em',
+                    // transition: 'min-height 0.2s linear,',
+                    // minHeight: isFocused ? '5.4em' : '3.6em',
                   }}
                   inputProps={{ 'aria-label': 'search' }}
                   onBlur={() => {
@@ -351,8 +367,8 @@ export default function Bot() {
               <div className="bot-page-input-bottom">
                 <Box className="left">
                   {isOpenModel && (
-                    <Box className="bot-page-input-model-box">
-                      <div className="model-title cortex-font">AI模型</div>
+                    <Box ref={modelBoxRef} className="bot-page-input-model-box">
+                      <div className="model-title">AI模型</div>
                       <div className="model-list">
                         {modelData.map((model) => (
                           <div
@@ -417,18 +433,6 @@ export default function Bot() {
                     flexItem
                   />
                   <div className="btn file"></div>
-                  {/* <AddCircleOutlineIcon
-                    className="btn add click-scale"
-                    style={{
-                      cursor: 'pointer',
-                    }}
-                  /> */}
-                  {/* <FileOpenIcon
-                    className="btn file"
-                    style={{
-                      cursor: 'pointer',
-                    }}
-                  /> */}
                 </Box>
                 <Box className="right">
                   {/* 清空 */}
